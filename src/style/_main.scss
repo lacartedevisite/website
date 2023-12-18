@@ -1,0 +1,41 @@
+@import url("https://use.typekit.net/jlo2kkv.css");
+@import './layout';
+
+
+//font-family: "aktiv-grotesk-extended", sans-serif;
+//font-weight: 400;
+//font-style: normal;
+
+//font-family: "aktiv-grotesk-extended", sans-serif;
+//font-weight: 400;
+//font-style: italic;
+
+:root {
+  --s-font-baseline: 20px;
+
+  --s-color--purple-light: #814DF5;
+  --s-color--purple: #391589;
+  --s-color--purple--opcaity-60: #39158999;
+
+  --s-color--border: #8C8A84;
+
+  --s-color--brown--light: #E0D7C4;
+  --s-color--brown: #855F2E;
+  --s-color--darck--dark: #433017;
+
+  --s-shadow__color: #6C541F48;
+
+  --s-radius: .5rem;
+}
+
+html {
+  font-size: var(--s-font-baseline);
+  font-family: 'aktiv-grotesk-extended', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1rem;
+  font-size: .85rem;
+}

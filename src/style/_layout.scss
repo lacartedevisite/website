@@ -1,0 +1,43 @@
+.s-g-box-shadow {
+  box-shadow: 0 13px 21px var(--s-shadow__color);
+}
+
+.s-g-background-linear-v1 {
+  background: linear-gradient(45deg, var(--s-color--brown), var(--s-color--darck--dark));
+}
+
+
+// type
+.s-g-font-xxl {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  color: var(--s-color--purple-light);
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// UI
+
+.s-g-ui--button-rounded {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+}
