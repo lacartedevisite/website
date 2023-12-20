@@ -35,6 +35,8 @@
     function toggleCardPosition() {
         cardIsOpen.update(value => !value)
         isOpen = !isOpen
+
+
     }
 </script>
 
@@ -66,9 +68,7 @@
 
     .is-open & {
       transform:
-              //rotate3d(1, 0, 0, 180deg)
               rotate3d(0, 1, 0, 180deg)
-              //rotate3d(0, 0, 1, 180deg)
               translate(250px, 70px);
     }
   }
