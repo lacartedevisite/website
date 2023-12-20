@@ -5,9 +5,10 @@ import Card from "$lib/Card.svelte";
 <section class="s-g-section"
          id="impression"
 >
-  <h2 class="s-g-section__title"
-  >Impression
-  </h2>
+  <div class="s-g-section__title"
+  >
+    <h2>Impression</h2>
+  </div>
 
   <div class="s-g-section__content"
   >
@@ -23,14 +24,21 @@ import Card from "$lib/Card.svelte";
             <h3 class="s-g-font-xxl"
             >Petit format, grande précision: l’art de l’impression miniature
             </h3>
+            <div
+                    class="s-g-section__card__1__facenord"
+            ></div>
           </div>
           <div slot="verso">
-            <h2>verso</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
-              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
-              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
-              voluptatum!</p>
+            <p>Quand il s’agit d’imprimer des objets de petite taille, chaque millimètre compte. C’est pourquoi nous combinons la précision artisanale avec des technologies contemporaines pour garantir que chaque impression soit une réussite. Notre exigence de qualité signifie que chaque impression, aussi petite soit-elle, est réalisée à la perfection.</p>
+            <p>Nous pouvons réaliser :</p>
+            <ul>
+              <li>Impression Riso A3 jusqu’à 15 couleurs</li>
+              <li>Impression sur presse typo</li>
+              <li>Gaufrage</li>
+              <li>Impression Offset jusqu’au format A4</li>
+              <li>Impression à chaud</li>
+
+            </ul>
           </div>
         </Card>
       </div>
@@ -126,3 +134,12 @@ import Card from "$lib/Card.svelte";
     </div>
   </div>
 </section>
+
+<style lang="scss" >
+.s-g-section__card__1__facenord {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background: red;
+}
+</style>

@@ -21,7 +21,19 @@
 	<div
           class="s-app__footer"
   >
-		footer
+		<div>
+      <button on:click={() => {window.scrollTo({top: 0, behavior: "smooth"})}}
+      >
+        <img alt="logo"
+             src="/assets/logo-black.svg"
+             class="s-app__nav__logo"
+        >
+      </button>
+    </div>
+    <div>
+      RUE MARGUERITE DELLENBACH 5
+      <br>1205 GENÈVE
+    </div>
 	</div>
 </div>
 
@@ -31,14 +43,34 @@
     import {cardIsOpen} from "../store";
 </script>
 
-<style>
-	.s-app__nav {
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-      z-index: 1000;
-	}
+<style lang="scss">
+  .s-app__nav {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+  .s-app__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px black;
+    padding-top: 1rem;
+
+    button {
+      all: unset;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .s-app__nav__logo {
+    display: block;
+    height: 2rem;
+    width: auto;
+  }
 </style>

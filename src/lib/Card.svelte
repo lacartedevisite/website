@@ -10,6 +10,7 @@
   </button>
 
   <div class="s-card__content"
+       bind:this={cardContent}
   >
     <div class="s-card__content__face s-card__content__face--front"
          class:s-g-background-linear-brown--dark  ={styleVariante === 'is-brown--dark'}
@@ -29,6 +30,7 @@
     import {cardIsOpen} from "../store";
 
     let isOpen = false
+    let cardContent: HTMLDivElement | undefined
 
     export let styleVariante: 'is-brown--dark' | 'is-brown' | 'is-brown--light'
 
@@ -37,6 +39,23 @@
         isOpen = !isOpen
 
 
+        if(cardContent) {
+            const cardRect = cardContent.getBoundingClientRect()
+
+            const centerX = cardRect.left + cardRect.width / 2
+            const centerY = cardRect.top + cardRect.height / 2
+
+            const screenCenterX = window.innerWidth / 2
+            const screenCenterY = window.innerHeight / 2
+
+            console.log("centerX", centerX, "centerY", centerY)
+            console.log("screenCenterX", screenCenterX, "screenCenterY", screenCenterY)
+
+            console.log(`rotate3d(0, 1, 0, 180deg) translate(${centerX - screenCenterX}px, ${screenCenterY - centerY}px)`)
+
+            if(isOpen) cardContent.style.transform = `rotate3d(0, 1, 0, 180deg) translate(${centerX - screenCenterX}px, ${screenCenterY - centerY}px)`
+            else cardContent.style.transform = 'none'
+        }
     }
 </script>
 
@@ -62,9 +81,11 @@
 
   .s-card__content {
     transform: rotate3d(0, 0, 0, 0deg);
+    transform-origin: center center;
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
     position: relative;
+    display: flex;
 
     .is-open & {
       transform:
@@ -79,7 +100,6 @@
     backface-visibility: hidden;
     padding:        var(--s-radius);
     border-radius:  var(--s-radius);
-    min-height: 100%;
   }
 
   .s-card__content__face--front {
@@ -87,12 +107,12 @@
   }
 
   .s-card__content__face--back {
-    transform: rotateY(180deg);
+    transform: translate(-50%, -50%) rotateY(180deg);
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     max-width: 40rem;
     transition: width 1s ease-in-out, height 1s ease-in-out;
 

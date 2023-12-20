@@ -15,7 +15,7 @@
     justify-content: center;
     box-sizing: border-box;
     width: 100%;
-    padding: calc( var(--s-nav-height) + 2rem) 0 1rem 0;
+    padding: calc( var(--s-nav-height) + 2rem) 0 0 0;
   }
 
   .s-section-intro__box {
