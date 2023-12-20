@@ -34,7 +34,7 @@
   justify-content: space-between;
   background: var(--s-color--purple--opcaity-60);
   color: white;
-  height: 3rem;
+  height: var(--s-nav-height);
   align-items: center;
   border-radius: 3rem;
   padding-left: 1rem;
