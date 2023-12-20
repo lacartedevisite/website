@@ -20,10 +20,12 @@
   --s-color--border: #8C8A84;
 
   --s-color--brown--light: #E0D7C4;
+  --s-color--brown--yellow: #FFE486;
   --s-color--brown: #855F2E;
-  --s-color--darck--dark: #433017;
+  --s-color--brown--dark: #433017;
 
   --s-shadow__color: #6C541F48;
+
 
   --s-radius: .5rem;
 }
@@ -33,9 +35,13 @@ html {
   font-family: 'aktiv-grotesk-extended', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--s-color--brown--light);
+  scroll-behavior: smooth;
 }
 
 body {
   line-height: 1rem;
   font-size: .85rem;
+  margin: 0;
+  padding: 1rem;
 }

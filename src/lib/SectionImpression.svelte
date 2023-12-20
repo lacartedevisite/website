@@ -2,21 +2,127 @@
 import Card from "$lib/Card.svelte";
 </script>
 
-<section
-        class="s-g-section"
+<section class="s-g-section"
+         id="impression"
 >
-  <h2
-          class="s-g-section__title"
-  >IMPRESSION</h2>
-  <div>
-    <div>
-      <Card
+  <h2 class="s-g-section__title"
+  >Impression
+  </h2>
+
+  <div class="s-g-section__content"
+  >
+    <div class="s-g-grid s-g-grid--coll-4"
+    >
+      <div class="s-g-grid__item"
+           style="grid-column: 1 / 3"
       >
-        <div slot="recto" >
-          <p class="s-g-font-xxl">hello</p>
-        </div>
-        <div slot="verso" >verso</div>
-      </Card>
+        <Card
+                styleVariante='is-brown--dark'
+        >
+          <div slot="recto">
+            <h3 class="s-g-font-xxl"
+            >Petit format, grande précision: l’art de l’impression miniature
+            </h3>
+          </div>
+          <div slot="verso">
+            <h2>verso</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
+              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
+              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
+              voluptatum!</p>
+          </div>
+        </Card>
+      </div>
+
+      <div
+              class="s-g-grid__item"
+              style="grid-column: 3 / 5"
+      >
+        <Card
+                styleVariante='is-brown'
+        >
+          <div slot="recto">
+            <h3 class="s-g-font-xl"
+            >l’impression en ton direct. disponible en 15 couleurs, 105 combinaisons de bichromie.</h3>
+          </div>
+          <div slot="verso">
+
+          </div>
+        </Card>
+      </div>
+
+      <div
+              class="s-g-grid__item"
+              style="grid-column: 1 / 3"
+      >
+        <Card
+                styleVariante='is-brown'
+        >
+          <div slot="recto">
+            <h3 class="s-g-font-xl"
+            >l’impression en ton direct. disponible en 15 couleurs, 105 combinaisons de bichromie.</h3>
+          </div>
+          <div slot="verso">
+            <h2>verso</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
+              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
+              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
+              voluptatum!</p>
+          </div>
+        </Card>
+      </div>
+
+
+
+      <div
+              class="s-g-grid__item"
+              style="grid-column: 3 / 4"
+      >
+        <Card
+                styleVariante='is-brown'
+        >
+          <div slot="recto">
+            <h3 class="s-g-font-xl"
+            >l’impression en ton direct. disponible en 15 couleurs, 105 combinaisons de bichromie.</h3>
+          </div>
+          <div slot="verso">
+            <h2>verso</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
+              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
+              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
+              voluptatum!</p>
+          </div>
+        </Card>
+      </div>
+
+
+
+      <div
+              class="s-g-grid__item"
+              style="grid-column: 4 / 5"
+      >
+        <Card
+                styleVariante='is-brown'
+        >
+          <div slot="recto">
+            <h3 class="s-g-font-xl"
+            >l’impression en ton direct. disponible en 15 couleurs, 105 combinaisons de bichromie.</h3>
+          </div>
+          <div slot="verso">
+            <h2>verso</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
+              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
+              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
+              voluptatum!</p>
+          </div>
+        </Card>
+      </div>
+
+
     </div>
   </div>
 </section>

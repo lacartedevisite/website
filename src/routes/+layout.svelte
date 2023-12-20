@@ -1,4 +1,7 @@
-<div class="s-app">
+<div
+        class="s-app"
+        class:card-is-open={$cardIsOpen}
+>
 	<div
 					class="s-app__nav"
 	>
@@ -25,12 +28,17 @@
 <script>
     import AppNav from "$lib/AppNav.svelte";
     import "../style/_main.scss"
+    import {cardIsOpen} from "../store";
 </script>
 
 <style>
-	.app {
-	}
-
-	main {
+	.s-app__nav {
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 1000;
 	}
 </style>

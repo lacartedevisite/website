@@ -1,0 +1,12 @@
+<section
+        class="s-g-section"
+        id="graphisme"
+>
+  <h2
+          class="s-g-section__title"
+  >Graphisme
+  </h2>
+  <div
+          class="s-g-section__content"
+  ></div>
+</section>
