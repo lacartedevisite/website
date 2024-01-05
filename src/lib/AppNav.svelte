@@ -1,7 +1,7 @@
 <nav
         class="s-app-nav "
 >
-  <button on:click={() => {window.scrollTo({top: 0, behavior: "smooth"})}}
+  <button on:click={() => document.querySelector('.s-app')?.scrollTo({top: 0, behavior: "smooth"})}
   >
     <img alt="logo"
          src="/assets/logo.svg"

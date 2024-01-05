@@ -8,31 +8,37 @@
     <AppNav/>
 	</div>
 
-  <div>
-
-  </div>
-
 	<main
           class="s-app__main"
   >
-		<slot />
-	</main>
+    <slot/>
+    {#if $cardIsOpen}
+      <div class="s-app__nav__cache"
+           transition:fade={{ delay: 500, duration: 500}}
+           on:click={closeCards}
+      ></div>
+    {/if}
+  </main>
+
 
 	<div
           class="s-app__footer"
   >
-		<div>
-      <button on:click={() => {window.scrollTo({top: 0, behavior: "smooth"})}}
-      >
-        <img alt="logo"
-             src="/assets/logo-black.svg"
-             class="s-app__nav__logo"
+    <div class="s-app__footer__box"
+    >
+      <div>
+        <button on:click={() => document.querySelector('.s-app')?.scrollTo({top: 0, behavior: "smooth"})}
         >
-      </button>
-    </div>
-    <div>
-      RUE MARGUERITE DELLENBACH 5
-      <br>1205 GENÈVE
+          <img alt="logo"
+               src="/assets/logo-black.svg"
+               class="s-app__nav__logo"
+          >
+        </button>
+      </div>
+      <div>
+        RUE MARGUERITE DELLENBACH 5
+        <br>1205 GENÈVE
+      </div>
     </div>
 	</div>
 </div>
@@ -41,9 +47,25 @@
     import AppNav from "$lib/AppNav.svelte";
     import "../style/_main.scss"
     import {cardIsOpen} from "../store";
+    import {fade} from "svelte/transition"
+
+
+    function closeCards() {
+        cardIsOpen.update(value => {return false})
+    }
 </script>
 
 <style lang="scss">
+  .s-app {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
   .s-app__nav {
     padding: 1rem;
     position: fixed;
@@ -54,23 +76,50 @@
     z-index: 1000;
   }
 
+  .s-app__main {
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .s-app__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: solid 1px black;
-    padding-top: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
 
     button {
       all: unset;
       cursor: pointer;
       user-select: none;
     }
+
+    .s-app__footer__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: solid 1px black;
+      padding-top: 1rem;
+    }
   }
+
 
   .s-app__nav__logo {
     display: block;
     height: 2rem;
     width: auto;
+  }
+
+  .s-app__nav__cache {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 </style>

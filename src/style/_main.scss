@@ -17,10 +17,21 @@
   --s-color--purple: #391589;
   --s-color--purple--opcaity-60: #39158999;
 
-  --s-color--border: #8C8A84;
+  --s-color--pink: #C0797A;
+
+  --s-color--green: #38FC84;
+
+  --s-color--yellow: #F5FF03;
+
+  --s-color--grey--light: #B4B4B4;
+  --s-color--grey: #8C8A84;
+  --s-color--grey--dark: #3E3C2F;
+
+  --s-color--brown-yellow--light: #FFE486;
+  --s-color--brown-yellow: #86730D;
+  --s-color--brown-yellow--dark: #433A07;
 
   --s-color--brown--light: #E0D7C4;
-  --s-color--brown--yellow: #FFE486;
   --s-color--brown: #855F2E;
   --s-color--brown--dark: #433017;
 
@@ -28,6 +39,7 @@
 
 
   --s-radius: .5rem;
+  --s-radius--xl: 3rem;
 
   --s-nav-height: 3rem;
 }
@@ -39,11 +51,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--s-color--brown--light);
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 body {
   line-height: 1rem;
   font-size: .85rem;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

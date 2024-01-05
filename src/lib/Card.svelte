@@ -5,18 +5,26 @@
   <button
           on:click={toggleCardPosition}
           class="s-g-ui--button-rounded s-card__button"
+          style="background-color: {buttonColor}"
   >
-
+    <UIButtonAdd isBlack="{buttonIconIsBlack}" />
   </button>
 
   <div class="s-card__content"
        bind:this={cardContent}
   >
     <div class="s-card__content__face s-card__content__face--front"
-         class:s-g-background-linear-brown--dark  ={styleVariante === 'is-brown--dark'}
-         class:s-g-background-linear-brown        ={styleVariante === 'is-brown'}
-         class:s-g-background-linear-brown--light ={styleVariante === 'is-brown--light'}
+         class:s-g-background-linear-brown--dark    ={styleVariante === 'is-brown--dark'}
+         class:s-g-background-linear-brown          ={styleVariante === 'is-brown'}
+         class:s-g-background-linear-brown--light   ={styleVariante === 'is-brown--light'}
+         class:s-g-background-linear-green          ={styleVariante === 'is-green'}
+         class:s-g-background-linear-grey           ={styleVariante === 'is-grey'}
+         class:s-g-background-linear-yellow         ={styleVariante === 'is-yellow'}
+         class:s-g-background-linear-purple         ={styleVariante === 'is-purple-gradient'}
     >
+      {#if title}
+        <h3 class="s-card__title">{title}</h3>
+      {/if}
       <slot name="recto"/>
     </div>
     <div class="s-card__content__face s-card__content__face--back s-g-background-linear-brown"
@@ -28,17 +36,30 @@
 
 <script lang="ts" >
     import {cardIsOpen} from "../store";
+    import UIButtonAdd from "$lib/UIButtonAdd.svelte";
 
     let isOpen = false
     let cardContent: HTMLDivElement | undefined
 
-    export let styleVariante: 'is-brown--dark' | 'is-brown' | 'is-brown--light'
+    export let styleVariante: 'is-brown--dark' | 'is-brown' | 'is-brown--light' | 'is-purple' | 'is-green' | 'is-grey' | 'is-yellow' | 'is-purple-gradient'
+    export let title: string | null = null
+    export let buttonIconIsBlack = false
+    export let buttonColor = '#000'
 
     function toggleCardPosition() {
-        cardIsOpen.update(value => !value)
         isOpen = !isOpen
+        cardIsOpen.update(value => isOpen)
+        updateCardTransformation()
+    }
 
+    cardIsOpen.subscribe(value => {
+        if (!value) {
+            isOpen = false
+            updateCardTransformation()
+        }
+    })
 
+    function updateCardTransformation() {
         if(cardContent) {
             const cardRect = cardContent.getBoundingClientRect()
 
@@ -48,14 +69,10 @@
             const screenCenterX = window.innerWidth / 2
             const screenCenterY = window.innerHeight / 2
 
-            console.log("centerX", centerX, "centerY", centerY)
-            console.log("screenCenterX", screenCenterX, "screenCenterY", screenCenterY)
-
-            console.log(`rotate3d(0, 1, 0, 180deg) translate(${centerX - screenCenterX}px, ${screenCenterY - centerY}px)`)
-
             if(isOpen) cardContent.style.transform = `rotate3d(0, 1, 0, 180deg) translate(${centerX - screenCenterX}px, ${screenCenterY - centerY}px)`
             else cardContent.style.transform = 'none'
         }
+
     }
 </script>
 
@@ -66,6 +83,7 @@
     display: flex;
     z-index: 1;
     transition: z-index 0s .5s;
+    width: 100%;
 
     &.is-open {
       z-index: 1000000;
@@ -77,6 +95,14 @@
     bottom: .5rem;
     right: .5rem;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    :global(> *) {
+      width: 1.5rem;
+    }
   }
 
   .s-card__content {
@@ -86,6 +112,7 @@
     transform-style: preserve-3d;
     position: relative;
     display: flex;
+    width: 100%;
 
     .is-open & {
       transform:
@@ -94,16 +121,32 @@
     }
   }
 
+  .s-card__title {
+    padding: 1rem;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+  }
+
   .s-card__content__face {
     box-sizing: border-box;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    padding:        var(--s-radius);
     border-radius:  var(--s-radius);
+    width: 100%;
+    overflow: hidden;
   }
 
   .s-card__content__face--front {
     position: relative;
+
+    .is-purple & {
+      background: var(--s-color--purple-light);
+    }
+
+    .is-yellow & {
+      background: var(--s-color--yellow);
+    }
   }
 
   .s-card__content__face--back {
@@ -133,13 +176,17 @@
 
   .is-brown--dark {
     :global(h3) {
-      color: var(--s-color--brown--yellow);
+      color: var(--s-color--brown-yellow--light);
     }
   }
 
   .is-brown {
     :global(h3) {
-      color: var(--s-color--brown--yellow);
+      color: var(--s-color--brown-yellow--light);
+    }
+
+    .s-card__title {
+      color: var(--s-color--grey--dark);
     }
   }
 
@@ -147,6 +194,30 @@
     :global(h3) {
       color: var(--s-color--brown);
     }
+  }
+
+  .is-green {
+    :global(*) {
+      color: var(--s-color--purple-light);
+    }
+  }
+
+  .is-purple {
+    :global(*) {
+      color: white;
+    }
+  }
+
+  .is-grey,
+  .is-purple-gradient {
+    :global(*) {
+      color: var(--s-color--brown--light);
+    }
+  }
+
+  button {
+    position: relative;
+    z-index: 10;
   }
 </style>
 

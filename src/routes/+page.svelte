@@ -12,7 +12,6 @@
 
 
 <script lang="ts">
-  import Card from "$lib/Card.svelte";
   import SectionImpression from "$lib/SectionImpression.svelte";
   import SectionGraphisme from "$lib/SectionGraphisme.svelte";
   import SectionReproduction from "$lib/SectionReproduction.svelte";
