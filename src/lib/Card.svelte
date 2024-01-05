@@ -27,7 +27,7 @@
       {/if}
       <slot name="recto"/>
     </div>
-    <div class="s-card__content__face s-card__content__face--back s-g-background-linear-brown"
+    <div class="s-card__content__face s-card__content__face--back"
     >
       <slot name="verso"/>
     </div>
@@ -158,6 +158,9 @@
     left: 50%;
     max-width: 40rem;
     transition: width 1s ease-in-out, height 1s ease-in-out;
+    background-color: white;
+    padding: 1rem;
+    border: solid 10px var(--s-color--brown-yellow--light);
 
     .is-open & {
       width:  calc(100vw - 2rem);

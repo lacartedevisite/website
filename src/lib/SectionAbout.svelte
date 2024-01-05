@@ -30,7 +30,7 @@
                 <h2>PRÉSERVATION, ÉDUCATION, COOPÉRATION: LES PILIERS DE L’ASSOCIATION</h2>
               </div>
 
-              <div slot="verso">
+              <div slot="verso" class="s-g-remove-child-margin">
                 <p>Raison d’être de l’association: « préserver, valoriser, faire valoir et développer l’art et les
                   techniques associés à l’impression artisanale et à l’édition »</p>
                 <p>Notamment grâce à :</p>
@@ -69,7 +69,7 @@
               <div slot="recto">
                 <h3>PERSONNE RÉFÉRENTE DE L’IMPRIMERIE :</h3>
               </div>
-              <div slot="verso"
+              <div slot="verso" class="s-g-remove-child-margin"
               >
                 <p>
                   Clovis Duran apporte son expertise dans la conception graphique, les outils numériques, la typographie, les techniques d’impression et la micro-éditon.
@@ -130,7 +130,7 @@
               >+41 22 327 74 77</a>
             </div>
           </div>
-          <div slot="verso"
+          <div slot="verso" class="s-g-remove-child-margin"
           >
           </div>
         </Card>

@@ -11,7 +11,7 @@
 //font-style: italic;
 
 :root {
-  --s-font-baseline: 20px;
+  --s-font-baseline: 15px;
 
   --s-color--purple-light: #814DF5;
   --s-color--purple: #391589;
@@ -42,6 +42,8 @@
   --s-radius--xl: 3rem;
 
   --s-nav-height: 3rem;
+
+  --s-site-max-width: 1100px;
 }
 
 html {

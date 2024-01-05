@@ -2,10 +2,12 @@
         class="s-app"
         class:card-is-open={$cardIsOpen}
 >
-	<div
-					class="s-app__nav"
+	<div class="s-app__nav"
 	>
-    <AppNav/>
+    <div class="s-app__nav__max-width"
+    >
+      <AppNav/>
+    </div>
 	</div>
 
 	<main
@@ -26,6 +28,7 @@
   >
     <div class="s-app__footer__box"
     >
+      <div style="width: 100%; height: 1px; background: black"></div>
       <div>
         <button on:click={() => document.querySelector('.s-app')?.scrollTo({top: 0, behavior: "smooth"})}
         >
@@ -74,12 +77,19 @@
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
+
+    .s-app__nav__max-width {
+      max-width: var(--s-site-max-width);
+      margin: auto;
+    }
   }
 
   .s-app__main {
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: var(--s-site-max-width);
+    margin: auto;
   }
 
   .s-app__footer {
@@ -88,6 +98,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 2rem;
+    padding-bottom: 1rem;
 
     button {
       all: unset;
@@ -99,8 +110,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: solid 1px black;
-      padding-top: 1rem;
+      padding: 0 1rem;
+      box-sizing: border-box;
+      max-width: var(--s-site-max-width);
+      margin: auto;
+      flex-wrap: wrap;
     }
   }
 

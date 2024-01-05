@@ -30,10 +30,12 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
                 >Petit format, grande précision: l’art de l’impression miniature
               </h3>
               <div class="s-g-section__card__1__facenord__img-box"
-              ></div>
+              >
+                <img alt="" src="/assets/imgs/carte_facenord_verso.jpg"/>
+              </div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
             <p>Quand il s’agit d’imprimer des objets de petite taille, chaque millimètre compte. C’est pourquoi nous combinons la précision artisanale avec des technologies contemporaines pour garantir que chaque impression soit une réussite. Notre exigence de qualité signifie que chaque impression, aussi petite soit-elle, est réalisée à la perfection.</p>
             <p>Nous pouvons réaliser :</p>
             <ul>
@@ -83,7 +85,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               </div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
 
           </div>
         </Card>
@@ -105,7 +107,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               ></div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
             <h2>verso</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
               excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
@@ -135,7 +137,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               ></div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
             <h2>verso</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
               excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
@@ -165,7 +167,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               ></div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
             <h2>verso</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
               excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
@@ -191,7 +193,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               ></div>
             </div>
           </div>
-          <div slot="verso">
+          <div slot="verso" class="s-g-remove-child-margin">
             <h2>verso</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
               excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
@@ -234,7 +236,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
                 <br/>COMBINEZ LES CAPACITÉS DES MACHINES POUR DES RÉSULTATS SUR MESURE</h3>
             </div>
           </div>
-          <div slot="verso"></div>
+          <div slot="verso" class="s-g-remove-child-margin"></div>
         </Card>
       </div>
 
@@ -271,6 +273,16 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
       width: 100%;
       padding-top: 100%;
       background: red;
+
+      > img {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center left;
+      }
     }
   }
 

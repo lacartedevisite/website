@@ -1,9 +1,10 @@
 <nav
-        class="s-app-nav "
+        class="s-app-nav"
 >
   <button on:click={() => document.querySelector('.s-app')?.scrollTo({top: 0, behavior: "smooth"})}
   >
-    <img alt="logo"
+    <img class="s-app-nav__logo"
+         alt="logo"
          src="/assets/logo.svg"
     >
   </button>
@@ -56,6 +57,11 @@ button {
 
 img {
   display: block;
+}
+
+.s-app-nav__logo {
+  display: block;
+  height: calc( var(--s-nav-height) - .80rem);
 }
 
 </style>
