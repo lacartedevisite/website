@@ -205,6 +205,7 @@
     max-width: 40rem;
     transition: width 1s ease-in-out, height 1s ease-in-out;
     padding: .5rem;
+    z-index: -10;
     background:
             transparent
             conic-gradient(from 25deg at 50% 50%, #D9A700 0%, #F0D500 100%)
