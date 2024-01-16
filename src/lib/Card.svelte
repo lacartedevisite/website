@@ -2,13 +2,18 @@
         class="s-card {styleVariante}"
         class:is-open={isOpen}
 >
-  <button
-          on:click={toggleCardPosition}
-          class="s-g-ui--button-rounded s-card__button"
-          style="background-color: {buttonColor}"
-  >
-    <UIButtonAdd isBlack="{buttonIconIsBlack}" />
-  </button>
+  {#if !isOpen && $$slots.verso}
+    <button
+            on:click={toggleCardPosition}
+            in:scaleRotate
+            out:scaleRotate
+            class="s-g-ui--button-rounded s-card__button"
+            style="background-color: {buttonColor}"
+    >
+      <UIButtonAdd isBlack="{buttonIconIsBlack}"/>
+    </button>
+  {/if}
+
 
   <div class="s-card__content"
        bind:this={cardContent}
@@ -21,9 +26,13 @@
          class:s-g-background-linear-grey           ={styleVariante === 'is-grey'}
          class:s-g-background-linear-yellow         ={styleVariante === 'is-yellow'}
          class:s-g-background-linear-purple         ={styleVariante === 'is-purple-gradient'}
+         class:s-g-background-linear-purple--light  ={styleVariante === 'is-purple-yellow-gradient'}
+         style="background: {backgroundFrontCard};"
     >
       {#if title}
-        <h3 class="s-card__title">{title}</h3>
+        <h3 class="s-card__title"
+            style="color: {titleColor}"
+        >{title}</h3>
       {/if}
       <slot name="recto"/>
     </div>
@@ -41,7 +50,25 @@
     let isOpen = false
     let cardContent: HTMLDivElement | undefined
 
-    export let styleVariante: 'is-brown--dark' | 'is-brown' | 'is-brown--light' | 'is-purple' | 'is-green' | 'is-grey' | 'is-yellow' | 'is-purple-gradient'
+    export let titleColor: string | undefined = undefined
+    export let backgroundFrontCard: string | undefined = undefined
+
+    export let styleVariante:
+        undefined
+        | 'is-brown--dark'
+        | 'is-brown'
+        | 'is-brown--light'
+        | 'is-purple'
+        | 'is-green'
+        | 'is-grey'
+        | 'is-yellow'
+        | 'is-purple-gradient'
+        | 'is-purple-yellow-gradient'
+        | 'is-image--dark'
+        | 'is-beige-gradient'
+        | 'is-grey-gradient'
+    = undefined
+
     export let title: string | null = null
     export let buttonIconIsBlack = false
     export let buttonColor = '#000'
@@ -74,6 +101,23 @@
         }
 
     }
+
+    // animation fun
+    function scaleRotate(el: Node, params: any, options: { direction: 'in' | 'out' | 'both' }): {
+        duration?: number,
+        delay?: number,
+        easing?: (t: number) => number,
+        css?: (t: number, u: number) => string,
+        tick?: (t: number, u: number) => void
+    } {
+
+        return {
+            delay: options.direction === 'in' ? 1000 : 0,
+            duration: 500,
+            easing: t => t * t * t,
+            css: (t, u) => `transform: scale(${t}) rotate(${t * 90}deg)`
+        }
+    }
 </script>
 
 <style lang="scss" >
@@ -87,6 +131,7 @@
 
     &.is-open {
       z-index: 1000000;
+      pointer-events: none;
     }
   }
 
@@ -113,6 +158,7 @@
     position: relative;
     display: flex;
     width: 100%;
+    pointer-events: auto;
 
     .is-open & {
       transform:
@@ -158,9 +204,28 @@
     left: 50%;
     max-width: 40rem;
     transition: width 1s ease-in-out, height 1s ease-in-out;
-    background-color: white;
-    padding: 1rem;
-    border: solid 10px var(--s-color--brown-yellow--light);
+    padding: .5rem;
+    background:
+            transparent
+            conic-gradient(from 25deg at 50% 50%, #D9A700 0%, #F0D500 100%)
+            0
+            0
+            no-repeat
+            padding-box
+  ;
+
+    :global( > * ) {
+      background: white;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--s-radius);
+      padding: 1rem;
+      box-sizing: border-box;
+
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
 
     .is-open & {
       width:  calc(100vw - 2rem);
@@ -199,6 +264,12 @@
     }
   }
 
+  .is-image--dark {
+    .s-card__title {
+      color: #E0D7C4;
+    }
+  }
+
   .is-green {
     :global(*) {
       color: var(--s-color--purple-light);
@@ -206,21 +277,29 @@
   }
 
   .is-purple {
-    :global(*) {
-      color: white;
+    .s-card__content__face--front {
+      :global(*) {
+        color: white;
+      }
     }
   }
 
   .is-grey,
   .is-purple-gradient {
-    :global(*) {
-      color: var(--s-color--brown--light);
+    .s-card__content__face--front {
+      :global(*) {
+        color: var(--s-color--brown--light);
+      }
     }
   }
 
   button {
     position: relative;
     z-index: 10;
+  }
+
+  :global([slot="verso"]) {
+    overflow: auto;
   }
 </style>
 

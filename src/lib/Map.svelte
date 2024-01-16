@@ -7,7 +7,7 @@
           class="s-map__title s-g-font-l"
   >AU CŒUR DE GENÈVE</h3>
   <img alt="carte"
-       src="/map.png"
+       src="/assets/imgs/Groupe%204571.jpg"
   >
 </a>
 

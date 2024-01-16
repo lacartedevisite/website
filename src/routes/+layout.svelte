@@ -19,6 +19,15 @@
            transition:fade={{ delay: 500, duration: 500}}
            on:click={closeCards}
       ></div>
+      <button
+              on:click={closeCards}
+              in:scaleRotate
+              out:scaleRotate
+              class="s-g-ui--button-rounded s-card__button s-app__button-close"
+              style="background-color: white"
+      >
+        <UIButtonAdd isBlack="{true}"/>
+      </button>
     {/if}
   </main>
 
@@ -28,7 +37,7 @@
   >
     <div class="s-app__footer__box"
     >
-      <div style="width: 100%; height: 1px; background: black"></div>
+      <div class="s-app__footer__box__line"></div>
       <div>
         <button on:click={() => document.querySelector('.s-app')?.scrollTo({top: 0, behavior: "smooth"})}
         >
@@ -46,15 +55,33 @@
 	</div>
 </div>
 
-<script>
+<script lang="ts">
     import AppNav from "$lib/AppNav.svelte";
     import "../style/_main.scss"
     import {cardIsOpen} from "../store";
     import {fade} from "svelte/transition"
+    import UIButtonAdd from "$lib/UIButtonAdd.svelte";
 
 
     function closeCards() {
-        cardIsOpen.update(value => {return false})
+        cardIsOpen.update(value => false)
+    }
+
+    // animation fun
+    function scaleRotate(el: Node, params: any, options: { direction: 'in' | 'out' | 'both' }): {
+      duration?: number,
+      delay?: number,
+      easing?: (t: number) => number,
+      css?: (t: number, u: number) => string,
+      tick?: (t: number, u: number) => void
+    } {
+
+      return {
+        delay: options.direction === 'in' ? 1000 : 0,
+        duration: 500,
+        easing: t => t * t * t,
+        css: (t, u) => `transform: scale(${t}) rotate(${t * 90}deg)`
+      }
     }
 </script>
 
@@ -67,6 +94,11 @@
     height: 100%;
     overflow: auto;
     box-sizing: border-box;
+    scrollbar-gutter: stable;
+
+    &.card-is-open {
+      overflow: hidden;
+    }
   }
 
   .s-app__nav {
@@ -110,12 +142,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 1rem;
+      padding: 1rem;
       box-sizing: border-box;
       max-width: var(--s-site-max-width);
-      margin: auto;
       flex-wrap: wrap;
+      margin: 1rem auto auto;
+      position: relative;
+      gap: 1rem;
     }
+  }
+
+  .s-app__footer__box__line {
+    width: calc( 100% - 2rem );
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 1rem;
   }
 
 
@@ -135,5 +178,16 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+
+  .s-app__button-close {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99999999999999999999;
+
+    :global(> *) {
+      transform: rotate(45deg);
+    }
   }
 </style>

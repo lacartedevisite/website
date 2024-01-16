@@ -86,7 +86,19 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
             </div>
           </div>
           <div slot="verso" class="s-g-remove-child-margin">
-
+            <h2>Services d'impression Risograph à la pointe de la technologie :</h2>
+            <p>Riso MH9350, la machine qui incarne un équilibre parfait entre artisanat traditionnel et technologie de
+              pointe. Économique sans sacrifier la qualité, elle offre des impressions en ton direct écologique grâce à
+              ses encres à base de soja. Elle est conçue pour minimiser la consommation d'énergie et l'utilisation de
+              matériaux polluants. Avec notre duplicateur, nous garantissons la meilleure qualité d'image possible sur
+              machine Riso.</p>
+            <p>Caractère Artisanal:</p>
+            <p>La presse Riso apporte un toucher artisanal à l'impression qui est difficile à reproduire avec des
+              méthodes plus industrielles. Chaque tirage est unique, reflétant l'engagement et le savoir-faire qui
+              entrent dans sa création.</p>
+            <p>La Riso offre la possibilité de combiner les capacités des différentes machines de l’atelier pour des
+              résultats sur mesure. Cela permet, par exemple, une couverture avec dorure à chaud et un corps d’ouvrage
+              imprimé à la Riso.</p>
           </div>
         </Card>
       </div>
@@ -104,16 +116,18 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               <h3 class="s-g-font-l s-g-section__card__3__heidelberg__title"
               >L’original Heidelberg Pour vos compositions typographiques</h3>
               <div class="s-g-section__card__3__heidelberg__img-box"
-              ></div>
+              >
+                <img src="/assets/imgs/chassis_platine_typographique.png" />
+              </div>
             </div>
           </div>
           <div slot="verso" class="s-g-remove-child-margin">
-            <h2>verso</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
-              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
-              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
-              voluptatum!</p>
+            <h2>Presse Heidelberg</h2>
+            <p>La carte de visite a réussi à marier le meilleur des deux mondes : l'authenticité de l'impression
+              typographique et les avantages des nouvelles technologies. La presse Heidelberg, bien que traditionnelle
+              dans son essence, est complétée par un ensemble d'outils numériques qui permettent une grande précision et
+              flexibilité. Les techniques modernes d’impression numérique ne peuvent simplement pas égaler le niveau de
+              qualité d'une impression typographique et son foulage si caractéristique.</p>
           </div>
         </Card>
       </div>
@@ -134,16 +148,18 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               <h3 class="s-g-font-l s-g-section__card__4__title"
               >Du volume dans vos imprimés</h3>
               <div class="s-g-section__card__4__img-box"
-              ></div>
+              >
+                <img src="/assets/imgs/Aa_gaufrage_v3.jpg"
+                     alt="illustration gaufrage"
+                >
+              </div>
             </div>
           </div>
           <div slot="verso" class="s-g-remove-child-margin">
-            <h2>verso</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
-              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
-              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
-              voluptatum!</p>
+            <h2>Gaufrage : L’art du relief dans vos créations imprimées</h2>
+            <p>Vous cherchez à donner une nouvelle dimension à vos projets d'impression ? Explorez notre service spécialisé de gaufrage, une technique qui ajoute texture et profondeur à vos imprimés, en créant un effet de volume.</p>
+            <p>Le gaufrage est un procédé artisanal qui consiste à presser une matrice sur un support papier pour y créer une empreinte en relief. Que vous souhaitiez mettre en valeur une image sur une carte de visite ou ajouter une finition élégante à une invitation spéciale, le gaufrage apporte une touche tactile et visuelle unique.</p>
+            <p>N'hésitez pas à nous contacter pour découvrir comment le gaufrage peut transformer vos projets d'impression .Nous vous guidons et vous aidons à réaliser vos projets.</p>
           </div>
         </Card>
       </div>
@@ -155,7 +171,7 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               style="grid-column: 4 / 5"
       >
         <Card
-                styleVariante='is-brown'
+                styleVariante='is-image--dark'
                 title="OFFSET"
         >
           <div slot="recto">
@@ -164,16 +180,14 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               <h3 class="s-g-font-l s-g-section__card__5__title"
               >L’impression offset une couleur format A4</h3>
               <div class="s-g-section__card__5__img-box"
-              ></div>
+              >
+                <img src="/assets/imgs/rotaprint_r40_impression_image_degrade_noir.jpg" />
+              </div>
             </div>
           </div>
           <div slot="verso" class="s-g-remove-child-margin">
-            <h2>verso</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
-              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
-              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
-              voluptatum!</p>
+            <p>La Rotaprint R40, avec sa stature de petite presse Offset, se présente comme une solution d'impression à la fois précise et de haute qualité. Cette machine est particulièrement adapté aux projets qui nécessitent une impression en une ou deux couleurs Pantone.</p>
+            <p>Sa capacité à gérer des petits formats, allant jusqu'au A4, la rend idéale pour des travaux d'impression soignés et précis. De plus, cette presse est spécialement conçue pour des tirages de faible à moyen volume, ce qui la rend particulièrement efficace pour des projets où la quantité ne doit pas compromettre la qualité.</p>
           </div>
         </Card>
       </div>
@@ -190,16 +204,20 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
             <div class="s-g-section__card__6 s-g-remove-child-margin"
             >
               <div class="s-g-section__card__6__img-box"
-              ></div>
+              >
+                <img src="/assets/imgs/impression_a_chaud_detoure.png"
+                     alt="impression à chaud"
+                >
+              </div>
             </div>
           </div>
           <div slot="verso" class="s-g-remove-child-margin">
-            <h2>verso</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis, cumque ducimus eos, est et ex
-              excepturi incidunt ipsam itaque non officia perspiciatis porro qui quia quod voluptatem. Eligendi, odit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi ea eius enim eum
-              eveniet inventore iusto magnam nesciunt nisi odit officia quos, repudiandae sunt tempore totam voluptatem
-              voluptatum!</p>
+            <p>Si vous recherchez une finition exceptionnelle pour vos projets d'impression, l'impression à chaud est la
+              solution parfaite. Cette technique artisanale ajoute raffinement et sophistication aux cartes de visite,
+              aux invitations, et aux petites brochures.</p>
+            <p>L'impression à chaud est une méthode artisanale qui consiste à appliquer une feuille métallique ou un
+              film sur une surface imprimée en utilisant une plaque chauffée. Le résultat ? Un design brillant et
+              texturé qui attire l'œil et élève la qualité perçue de vos imprimés.</p>
           </div>
         </Card>
       </div>
@@ -208,13 +226,25 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
               class="s-g-grid__item"
               style="grid-column: 1 / 5"
       >
-        <div class="s-g-section__tools-list"
+        <div class="s-g-section__tools-list s-remove-mobile-on-version"
         >
-          <div class="s-g-section__tools-list__img-box"></div>
+          <div class="s-g-section__tools-list__img-box">
+            <img src="/assets/imgs/rotaprintR40_1.png"
+                 alt="rotaprint R40"
+            />
+          </div>
           <div class="s-g-section__tools-list__icon-box"><UIButtonAdd isBlack="{true}" /></div>
-          <div class="s-g-section__tools-list__img-box"></div>
+          <div class="s-g-section__tools-list__img-box">
+            <img src="/assets/imgs/risomh9350_2.png"
+                 alt="risomh 9350"
+            />
+          </div>
           <div class="s-g-section__tools-list__icon-box"><UIButtonAdd isBlack="{true}" /></div>
-          <div class="s-g-section__tools-list__img-box"></div>
+          <div class="s-g-section__tools-list__img-box">
+            <img src="/assets/imgs/heidelberg_3.png"
+                 alt="offset heidelberg"
+            />
+          </div>
         </div>
       </div>
 
@@ -236,7 +266,16 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
                 <br/>COMBINEZ LES CAPACITÉS DES MACHINES POUR DES RÉSULTATS SUR MESURE</h3>
             </div>
           </div>
-          <div slot="verso" class="s-g-remove-child-margin"></div>
+          <div slot="verso" class="s-g-remove-child-margin">
+            <div>
+              <p>Grâce aux possibilités offertes par nos différentes presses, nous pouvons combiner les capacités des machines pour des résultats sur mesure. Nous pouvons réaliser par exemple, une couverture avec dorure à chaud avec un corps d’ouvrage imprimé à la Riso. Cette approche vous permet d’explorer des territoires graphiques encore inexplorés.</p>
+              <p>Artistes, graphistes, créateur·rice·s… : bienvenu·e·s !</p>
+
+              <p>NOUS TRAVAILLONS AVEC DES MACHINES
+                <br>ROTAPRINT  RISO  ORIGINAL HEIDELBERG</p>
+
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -272,7 +311,6 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
       position: relative;
       width: 100%;
       padding-top: 100%;
-      background: red;
 
       > img {
         display: block;
@@ -308,11 +346,17 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
 
     .s-g-section__card__3__heidelberg__img-box {
       position: absolute;
-      background: red;
       width: 50%;
       height: 100%;
       top: 0;
       right: 0;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -322,16 +366,24 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
     .s-g-section__card__4__title {
       position: relative;
       z-index: 10;
+      color: black;
+      padding-bottom: 6rem;
     }
 
     .s-g-section__card__4__img-box {
-      background: red;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -341,16 +393,24 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
     .s-g-section__card__5__title {
       position: relative;
       z-index: 10;
+      color: #E0D7C4;
+      padding-bottom: 6rem;
     }
 
     .s-g-section__card__5__img-box {
-      background: red;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -364,10 +424,18 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
     }
 
     .s-g-section__card__6__img-box {
-      background: red;
       position: relative;
       width: 100%;
-      height: 3rem;
+      padding-top: 10%;
+
+      > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -378,15 +446,19 @@ import UIButtonAdd from "$lib/UIButtonAdd.svelte";
     align-items: center;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-bottom: -3rem;
+    margin-bottom: -6rem;
     position: relative;
     z-index: 5;
   }
 
   .s-g-section__tools-list__img-box {
-    height: 10rem;
-    background: red;
     width: 100%;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   .s-g-section__tools-list__icon-box {

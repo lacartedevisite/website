@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>La CARTE DE VISITE Genève</title>
+  <meta name="description" content="This is where the description goes for SEO" />
+</svelte:head>
+
 <div
         class="s-page"
 >

@@ -9,18 +9,18 @@
     >
   </button>
 
-  <a href="#impression"   >IMPRESSION</a>
-  <a href="#graphisme"    >GRAPHISME</a>
-  <a href="#reproduction" >REPRODUCTION</a>
-  <a href="#about"       >À PROPOS</a>
+  <a class="s-app-nav__text-link s-remove-mobile-on-version" href="#impression"   >IMPRESSION</a>
+  <a class="s-app-nav__text-link s-remove-mobile-on-version" href="#graphisme"    >GRAPHISME</a>
+  <a class="s-app-nav__text-link s-remove-mobile-on-version" href="#reproduction" >REPRODUCTION</a>
+  <a class="s-app-nav__text-link s-remove-mobile-on-version" href="#about"       >À PROPOS</a>
 
   <a
           href="mailto:hello@lacartedevisite.ch"
           target="_blank"
   >
-    <img
-            alt="mailto"
-            src="/assets/icon-mail-open.svg"
+    <img  class="s-app-nav__mailto-icon"
+          alt="mailto"
+          src="/assets/icon-mail-open.svg"
     />
   </a>
 
@@ -45,8 +45,13 @@
 }
 
 a {
+  display: block;
   color: inherit;
   text-decoration: none;
+}
+
+.s-app-nav__text-link {
+  padding-top: .25em;
 }
 
 button {
@@ -62,6 +67,12 @@ img {
 .s-app-nav__logo {
   display: block;
   height: calc( var(--s-nav-height) - .80rem);
+}
+
+.s-app-nav__mailto-icon {
+  display: block;
+  height: calc( var(--s-nav-height) - 1.5rem);
+  position: relative;
 }
 
 </style>

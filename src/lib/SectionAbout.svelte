@@ -22,12 +22,13 @@
           >
             <Card
                     styleVariante="is-green"
+                    buttonColor="#814DF5"
             >
               <div slot="recto"
                    class="s-section-about__card__assos__recto"
               >
                 <p>L’ASSOCIATION</p>
-                <h2>PRÉSERVATION, ÉDUCATION, COOPÉRATION: LES PILIERS DE L’ASSOCIATION</h2>
+                <h2>PRÉSERVATION, ÉDUCATION, COOPÉRATION: LES&nbsp;PILIERS DE L’ASSOCIATION</h2>
               </div>
 
               <div slot="verso" class="s-g-remove-child-margin">
@@ -56,6 +57,11 @@
                   <li>Nicolas Baldran</li>
                 </ul>
 
+                <a class="s-g-ui-button"
+                        target="_blank"
+                   href="/assets/status-v202311.pdf"
+                >Status format PDF</a>
+
               </div>
             </Card>
           </div>
@@ -65,16 +71,19 @@
 
             <Card
                     styleVariante="is-purple"
+                    buttonColor="#3E3C2F"
             >
-              <div slot="recto">
-                <h3>PERSONNE RÉFÉRENTE DE L’IMPRIMERIE :</h3>
+              <div class="s-section-about__card__person-ref__recto"
+                      slot="recto">
+                <h3>PERSONNE RÉFÉRENTE<br>DE L’IMPRIMERIE :</h3>
+                <p>CLOVIS DURAN</p>
               </div>
               <div slot="verso" class="s-g-remove-child-margin"
               >
                 <p>
                   Clovis Duran apporte son expertise dans la conception graphique, les outils numériques, la typographie, les techniques d’impression et la micro-éditon.
-                  A ses côtés, les autres membres fondateur·rice·s de l’association, Clarisse Coeur et Clément Drévo, apportent des compétences complémentaires en développement d’activités, stratégies et communication L’entourage de l’association est un vivier de spécialistes dans divers domaines qui saura la conseiller afin de faire vivre l’entreprise à la hauteur de ses ambitions.
                 </p>
+                <p>A ses côtés, les membres fondateur·rice·s de l’association, Clarisse Coeur et Clément Drévo, apportent des compétences complémentaires en développement d’activités, stratégies et communication.</p>
               </div>
             </Card>
           </div>
@@ -87,9 +96,25 @@
         <Card
                 styleVariante="is-grey"
         >
-          <div slot="recto">
+          <div class="s-section-about__card__status__recto"
+               slot="recto">
             <p>NOS STATUTS</p>
+
+            <div class="s-section-about__card__status__recto__img-box"
+            >
+              <img src="/assets/imgs/association_visuel.jpg"
+                   alt="illustration du document pour les status"
+              />
+              <a class="s-g-ui-button"
+                 target="_blank"
+                 href="/assets/status-v202311.pdf"
+                 style="color: black; display: block; margin-top: 3rem"
+              >Status format PDF</a>
+            </div>
           </div>
+
+
+
         </Card>
       </div>
 
@@ -116,22 +141,24 @@
                 styleVariante="is-yellow"
         >
           <div slot="recto">
-            <h3>VOUS AVEZ UN PROJET ? DISCUTONS-EN!</h3>
             <div
-                    class="s-section-about__meeting"
+                    class="s-section-about__meeting s-g-remove-child-margin"
             >
-              <a href="mailto:INFO@LACARTEDEVISITE.CH"
-                 target="_blank"
-                 class="s-g-ui-button"
-              >INFO@LACARTEDEVISITE.CH</a>
-              <a href="tel:+41223277477"
-                 target="_blank"
-                 class="s-g-ui-button"
-              >+41 22 327 74 77</a>
+              <h3 class="s-section-about__meeting__title"
+              >VOUS AVEZ UN PROJET ? DISCUTONS-EN!</h3>
+
+              <div class="s-section-about__meeting__content"
+              >
+                <a href="mailto:INFO@LACARTEDEVISITE.CH"
+                   target="_blank"
+                   class="s-g-ui-button"
+                >INFO@LACARTEDEVISITE.CH</a>
+                <a href="tel:+41223277477"
+                   target="_blank"
+                   class="s-g-ui-button"
+                >+41 22 327 74 77</a>
+              </div>
             </div>
-          </div>
-          <div slot="verso" class="s-g-remove-child-margin"
-          >
           </div>
         </Card>
       </div>
@@ -145,12 +172,57 @@ import Map from "$lib/Map.svelte";
 import Card from "$lib/Card.svelte";
 </script>
 
-<style>
+<style lang="scss">
   .s-section-about__card__assos__recto {
-      padding-bottom: 10rem;
+    padding: 1rem 1rem 10rem 1rem;
   }
 
   .s-section-about__meeting {
-      margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .s-section-about__meeting__title {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @media (max-width: 860px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .s-section-about__meeting__content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+
+    @media (max-width: 860px) {
+      flex-direction: column;
+    }
+  }
+
+  .s-section-about__card__person-ref__recto {
+    padding: 1rem;
+    min-height: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .s-section-about__card__status__recto {
+    padding: 1rem;
+  }
+
+  .s-section-about__card__status__recto__img-box {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 </style>
