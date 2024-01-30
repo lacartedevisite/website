@@ -149,14 +149,14 @@
 
               <div class="s-section-about__meeting__content"
               >
-                <a href="mailto:INFO@LACARTEDEVISITE.CH"
+                <a href="mailto:clovis@lacartevisite.ch"
                    target="_blank"
                    class="s-g-ui-button"
-                >INFO@LACARTEDEVISITE.CH</a>
-                <a href="tel:+41223277477"
+                >clovis@lacartevisite.ch</a>
+                <a href="tel:+41223287477"
                    target="_blank"
                    class="s-g-ui-button"
-                >+41 22 327 74 77</a>
+                >+41 22 328 74 77</a>
               </div>
             </div>
           </div>
