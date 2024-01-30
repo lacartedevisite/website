@@ -30,7 +30,9 @@
               >L’ACCOMPAGNEMENT SUR-MESURE POUR VOS PROJETS CRÉATIFS</h3>
               <div class="s-g-section__card__graphisme__img-box"
               >
-                <img src="/assets/imgs/graphisme.jpg"/>
+                <img src="/assets/imgs/graphisme.jpg"
+                     alt="image graphisme"
+                />
               </div>
             </div>
           </div>
