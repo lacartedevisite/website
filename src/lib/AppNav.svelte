@@ -15,7 +15,7 @@
   <a class="s-app-nav__text-link s-remove-mobile-on-version" href="#about"       >À PROPOS</a>
 
   <a
-          href="mailto:hello@lacartedevisite.ch"
+          href="mailto:clovis@lacartevisite.ch"
           target="_blank"
   >
     <img  class="s-app-nav__mailto-icon"
