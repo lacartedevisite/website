@@ -51,7 +51,7 @@ import Card from "$lib/Card.svelte";
             Association à but non lucratif, la Carte de visite a pour mission de préserver et faire évoluer les savoirs et techniques d’impression.
           </p>
           <a class="s-g-ui-button"
-             href="mailto:clovis@lacartevisite.ch"
+             href="mailto:clovis@lacartedevisite.ch"
              target="_blank"
           >nous contacter</a>
         </div>

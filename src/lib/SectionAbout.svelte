@@ -149,10 +149,10 @@
 
               <div class="s-section-about__meeting__content"
               >
-                <a href="mailto:clovis@lacartevisite.ch"
+                <a href="mailto:clovis@lacartedevisite.ch"
                    target="_blank"
                    class="s-g-ui-button"
-                >clovis@lacartevisite.ch</a>
+                >clovis@lacartedevisite.ch</a>
                 <a href="tel:+41223287477"
                    target="_blank"
                    class="s-g-ui-button"
